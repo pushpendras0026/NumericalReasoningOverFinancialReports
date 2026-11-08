@@ -1,0 +1,39 @@
+# Credentials
+.env
+.env.*
+!.env.example
+api.txt
+*.pem
+*.key
+
+# Local environment and generated results
+.venv/
+__pycache__/
+*.pyc
+cache.sqlite*
+artifacts/
+
+# Fetched by scripts/fetch_upstream.sh
+third_party/
+data/WikiTables-WithLinks/
+data/ConvFinQA/data/
+
+# LaTeX build output
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.nav
+*.snm
+*.toc
+
+# Manim render cache and joined video
+presentation/video/media/
+presentation/video/explainer.mp4
+
+# OS metadata
+.DS_Store
+*:Zone.Identifier
