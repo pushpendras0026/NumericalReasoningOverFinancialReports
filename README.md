@@ -37,7 +37,7 @@ You need Python 3.12, Java 17 or newer, Git LFS and LaTeX.
 
 ```bash
 sudo apt update
-sudo apt install -y python3.12-venv default-jdk git git-lfs latexmk texlive-latex-extra texlive-publishers texlive-science
+sudo apt install -y python3.12-venv default-jdk git git-lfs latexmk texlive-latex-extra texlive-science
 git lfs install
 ```
 
@@ -167,7 +167,7 @@ latexmk -pdf -interaction=nonstopmode main.tex
 cd ..
 ```
 
-The result is `report/main.pdf` (5 pages).
+The result is `report/main.pdf`.
 
 ### Step 11. Build the slides and video clips (optional)
 
@@ -188,17 +188,6 @@ cd presentation/video
 ../../.venv/bin/manim -qh -a clips.py
 cd ../..
 ```
-
-## Common problems
-
-| Problem | Fix |
-|---|---|
-| `No module named nrqa` | Run `export PYTHONPATH=src` from the project folder |
-| `IEEEtran.cls not found` | Run `sudo apt install -y texlive-publishers` |
-| A dataset file looks very small or cannot be read | Run `git lfs pull` |
-| `third_party` or `WikiTables-WithLinks` not found | Run step 4 again |
-| Java or Spark error | Run `java -version` and check that it is 17 or newer |
-| Model run stops with a quota error | Wait for the next day and run the same command |
 
 ## Repository layout
 
